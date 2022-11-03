@@ -1,0 +1,19 @@
+---
+- name: create RDS instance
+  rds_instance:
+    allocated_storage: "{{ allocated_storage }}"
+    db_instance_class: "{{ instance_class }}"
+    db_instance_identifier: "{{ instance_identifier}}"
+    db_name: "{{ db_name }}"
+    db_subnet_group_name: "{{ subnet_group_name }}"
+    engine: "{{ db_engine }}"
+    engine_version: "{{ db_engine_version }}"
+    license_model: "license-included"
+    master_user_password: "{{ master_passwd }}"
+    master_username: "{{ master_username }}"
+    max_allocated_storage: "{{ max_allocated_storage }}"
+    port: "{{ port }}"
+    region: "{{ region }}"
+    state: "present"
+    storage_type: "{{ storage_type }}"
+    vpc_security_group_ids: "{{ vpc_security_group_id }}"
