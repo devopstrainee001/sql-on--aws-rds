@@ -1,9 +1,26 @@
 ---
+- name: Create an RDS sql option group
+  community.aws.rds_option_group:
+    state: present
+    option_group_name: "{{ option_group_name }}"
+    engine_name: "{{ engine_name }}"
+    major_engine_version: "{{ major_engine_version }}"
+    option_group_description: "{{  option_group_description }}"
+    region: "{{ region }}"
+    apply_immediately: true
+    options:
+        - option_name: "{{ option_name }}"
+          port: "{{ option_group_port }}"
+          vpc_security_group_memberships:
+              - "{{ vpc_security_group_memberships }}"
+  register: new_rds_mssql_option_group
+
 - name: create RDS instance
   rds_instance:
     allocated_storage: "{{ allocated_storage }}"
     db_instance_class: "{{ instance_class }}"
     db_instance_identifier: "{{ instance_identifier}}"
+    domain: 
     db_subnet_group_name: "{{ subnet_group_name }}"
     engine: "{{ db_engine }}"
     engine_version: "{{ db_engine_version }}"
@@ -12,6 +29,7 @@
     master_username: "{{ master_username }}"
     max_allocated_storage: "{{ max_allocated_storage }}"
     port: "{{ port }}"
+    option_group_name: "{{ option_group_name }}"
     region: "{{ region }}"
     state: "present"
     storage_type: "{{ storage_type }}"

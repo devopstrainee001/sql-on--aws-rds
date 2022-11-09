@@ -1,4 +1,17 @@
 ---
+
+### SQL option group parameters###
+
+option_group_name: "sqlserver-se-option-group"
+engine_name : "sqlserver-se"
+major_engine_version: "15.00"
+option_group_description: "test mssql option group"
+option_name: "SSRS"
+option_group_port: 8443
+vpc_security_group_memberships: "sg-0b27a3e4ba4eae927"
+
+### RDS variables ###
+
 allocated_storage: 20
 instance_class: "db.t3.xlarge" 
 instance_identifier: "my-db-instance"
