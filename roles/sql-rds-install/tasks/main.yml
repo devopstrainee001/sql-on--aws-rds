@@ -28,74 +28,27 @@
     db_instance_class: "{{ instance_class }}"
     storage_type: "{{ storage_type }}"
     allocated_storage: "{{ allocated_storage }}"
-  # iops: Storage type gp2 does not support IOPS
     max_allocated_storage: "{{ max_allocated_storage }}"
     multi_az: "{{ multi_az }}"
-  # ec2_url:
     db_subnet_group_name: "{{ subnet_group_name }}"
     publicly_accessible: "{{ publicly_accessible }}"
     vpc_security_group_ids: "{{ vpc_security_group_id }}"
     port: "{{ port }}"
-  # preferred_maintenance_window:
-  # preferred_backup_window:
     backup_retention_period: 7
     storage_encrypted: "{{ storage_encrypted }}"
     kms_key_id: "{{ kms_key_id  }}"
     db_parameter_group_name: "{{ db_parameter_group_name }}"
     option_group_name: "{{ option_group_name }}"
     timezone: "{{ timezone }}"
-  # creation_source: 
-  # s3_bucket_name:  
-  # source_engine: mysql
-  # source_engine_version:
-  # source_region:
     auto_minor_version_upgrade: "{{ auto_minor_version_upgrade }}"
     apply_immediately: "{{ apply_immediately }}"
-  # s3_ingestion_role_arn:
-  # domain:
-  # monitoring_role_arn: 
     wait: "{{ wait }}"
-  # aws_ca_bundle:
     enable_iam_database_authentication: "{{ enable_iam_database_authentication }}"
-  # iam_roles: 
-  # enable_performance_insights: no
-  # purge_cloudwatch_logs_exports:
-  # restore_time: 
-  # enable_cloudwatch_logs_exports:
-  # purge_security_groups: 
-  # validate_certs:
-  # purge_iam_roles:
-  # promotion_tier: 
-  # force_update_password: no
-  # db_name: Db name must be null for engine: sqlserver-se
-  # ca_certificate_identifier:
-  # db_cluster_identifier: mssql-db-cluster
-  # db_security_groups: when calling the CreateDBInstance operation: DB Security Groups and Vpc Security Groups cannot both be provided.
-  # profile:
     debug_botocore_endpoint_logs: "{{ debug_botocore_endpoint_logs }}"
     deletion_protection: "{{ deletion_protection }}"
-  # aws_access_key:
-  # aws_secret_key:
-  # character_set_name:
     apply_immediately: "{{ apply_immediately }}"
-  # monitoring_interval:
-  # purge_tags:
-  # aws_config:
-  # tde_credential_arn:
-  # tde_credential_password: 
     force_failover: "{{ force_failover }}"
-  # processor_features:
     read_replica: "{{ read_replica }}"
     copy_tags_to_snapshot: "{{ copy_tags_to_snapshot }}"
-  # final_db_snapshot_identifier:
-  # db_snapshot_identifier: 
-  #  security_token:
-  # domain_iam_role_name: 
-  # storage_encrypted:
     allow_major_version_upgrade: "{{ allow_major_version_upgrade }}"
-  # tags:
-  # new_db_instance_identifier:
-  # s3_prefix: 
-  # performance_insights_kms_key_id: 
     skip_final_snapshot: "{{ skip_final_snapshot }}"
-  # performance_insights_retention_period:
