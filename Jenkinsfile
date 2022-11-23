@@ -21,7 +21,6 @@ pipeline {
                     }
                  }
            }
-
       stage ('Running Ansible playbook to install RDS SQl on AWS') {
           steps {
               script{
