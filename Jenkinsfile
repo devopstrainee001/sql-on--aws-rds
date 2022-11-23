@@ -1,7 +1,9 @@
 pipeline {
-    agent any
+  agent {
+	label 'localhost'
+  }
     stages {
-       stage ('Installing Python, Ansible, pymssql and boto3') {
+      stage ('Installing Python, Ansible, pymssql and boto3') {
           steps {
 	      script{
               sh ' sudo yum install python3-pip -y'
