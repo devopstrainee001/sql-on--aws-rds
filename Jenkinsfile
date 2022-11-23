@@ -1,5 +1,5 @@
 pipeline {
-    agenet 'any'
+    agent 'any'
     stages {
        stage ('Installing Python, Ansible, pymssql and boto3') {
           steps {
